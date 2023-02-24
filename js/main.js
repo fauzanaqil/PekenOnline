@@ -50,6 +50,18 @@
         });
     });
 
+    const header = document.querySelector('.header');
+    const headerHeight = header.offsetHeight;
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > headerHeight) {
+            header.classList.add('solid');
+            header.classList.remove('transparent');
+        } else {
+            header.classList.add('transparent');
+            header.classList.remove('solid');
+        }
+    });
+
     /*------------------
 		Navigation
 	--------------------*/
